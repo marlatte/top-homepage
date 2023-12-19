@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400&family=PT+Sans&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400&family=Roboto:wght@300;400&display=swap');
 
 /* ---------------     Reboot     --------------- */
 
@@ -30,13 +30,6 @@ h3 {
   font-weight: normal;
 }
 
-h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  font-family: 'Josefin Sans';
-  font-weight: 200;
-}
-
 /* ---------------     /Reboot     --------------- */
 
 /* ------------------ Universals ------------------ */
@@ -44,7 +37,7 @@ h2 {
 :root {
   /* Colors */
   --primary-bg: #0891b2;
-  --text-body: #565656;
+  --body-c: #565656;
   --icons: #181616;
 
   --card-img-1: #7c75ca;
@@ -53,6 +46,12 @@ h2 {
   --card-img-4: #cb7599;
   --card-img-5: #4793d9;
   --card-img-6: #9e1c1c;
+
+  /* Fonts */
+  --name-ff: 'Josefin Sans';
+  --section-header-ff: 'Josefin Sans';
+  --section-header-fw: 200;
+  --body-ff: 'Roboto';
 }
 
 body {
@@ -75,6 +74,13 @@ body {
 
   transform: translate(-1%, -10%) rotate(-30deg);
   transform-origin: bottom left;
+}
+
+h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  font-family: var(--section-header-ff);
+  font-weight: var(--section-header-fw);
 }
 
 /* ------------------ /Universals ------------------ */
