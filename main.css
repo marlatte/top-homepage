@@ -41,8 +41,14 @@ p.description {
 
 /* ------------------ Examples ------------------ */
 
+.examples {
+  margin: 100px 0;
+}
+
 .projects {
+  margin: 40px 0;
   display: grid;
+  gap: 50px;
 }
 
 .card {
@@ -75,7 +81,8 @@ p.description {
 
 .card .header {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 16px;
 }
 
 .card .title {
@@ -84,8 +91,38 @@ p.description {
   font-size: 1.2rem;
 }
 
-.projects :first-child .image {
+.card .header .fa-github {
+  font-size: 1.7rem;
+}
+
+.card .header .fa-external-link {
+  position: relative;
+  top: 2px;
+  font-size: 1.5rem;
+}
+
+.card-1 .image {
   background-color: var(--card-img-1);
+}
+
+.card-2 .image {
+  background-color: var(--card-img-2);
+}
+
+.card-3 .image {
+  background-color: var(--card-img-3);
+}
+
+.card-4 .image {
+  background-color: var(--card-img-4);
+}
+
+.card-5 .image {
+  background-color: var(--card-img-5);
+}
+
+.card-6 .image {
+  background-color: var(--card-img-6);
 }
 
 /* ------------------ /Examples ------------------ */
