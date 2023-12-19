@@ -54,7 +54,7 @@ p.body-text {
   font-weight: 300;
 }
 
-.hero .socials {
+.socials {
   padding: 6px 0;
 
   display: flex;
@@ -94,7 +94,7 @@ p.body-text {
   color: white;
   font-family: var(--body-ff);
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: center;
 }
 
