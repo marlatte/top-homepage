@@ -36,11 +36,14 @@ main {
 }
 
 .about-text {
+  margin-top: 10px;
   padding-top: 40px;
 
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  background-color: #fff;
 }
 
 p.body-text,
