@@ -6,6 +6,7 @@ main {
 
 @media (min-width: 700px) {
   main {
+    width: 80vw;
     padding-top: 50px;
   }
 }
@@ -32,10 +33,11 @@ main {
 }
 
 .hero .content img {
+  margin: auto;
   margin-bottom: calc(var(--hero-gap) * 2);
 
   height: var(--img-height);
-  width: 100%;
+  width: 90%;
 
   object-fit: cover;
 
@@ -44,9 +46,9 @@ main {
 
 .name {
   position: absolute;
-  top: calc(var(--img-height) - 108px);
+  top: calc(var(--img-height) - 106px);
   max-width: 250px;
-  margin: 0 0 0 6px;
+  margin: 0 0 0 6%;
 
   font-size: 3.5rem;
   color: white;
@@ -87,11 +89,11 @@ p.hero-text {
 
   .hero .content {
     position: relative;
-    left: -3.5vw;
+    left: -5vw;
   }
 
   .hero .content > *:not(img):not(.name) {
-    margin-left: 7vw;
+    margin-left: 10vw;
   }
 
   .hero .content img {
@@ -106,7 +108,7 @@ p.hero-text {
     top: 5%;
     max-width: unset;
     width: 390px;
-    left: 48%;
+    left: 42%;
   }
 
   .hero h2 {
