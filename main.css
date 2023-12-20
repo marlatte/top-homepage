@@ -1,21 +1,40 @@
 main {
-  padding: 20px;
+  width: 86vw;
+  align-self: center;
+  padding-top: 30px;
+}
+
+@media (min-width: 700px) {
+  main {
+    padding-top: 50px;
+  }
 }
 
 /* ------------------ Hero ------------------ */
 
 .hero {
-  display: flex;
-  flex-direction: column;
-}
+  --img-height: min(450px, 130vw);
 
-.picture-name {
   position: relative;
-  margin: 0 8px;
 }
 
-.hero img {
-  height: 450px;
+.hero-bg {
+  display: none;
+}
+
+.hero .content {
+  z-index: 1;
+}
+
+.content > * {
+  --hero-gap: 16px;
+  margin-bottom: var(--hero-gap);
+}
+
+.hero .content img {
+  margin-bottom: calc(var(--hero-gap) * 2);
+
+  height: var(--img-height);
   width: 100%;
 
   object-fit: cover;
@@ -25,36 +44,21 @@ main {
 
 .name {
   position: absolute;
-  bottom: 0;
-  padding-left: 6px;
+  top: calc(var(--img-height) - 108px);
+  max-width: 250px;
+  margin: 0 0 0 6px;
 
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: white;
   text-shadow: -1px 4px 6px #000000de;
 
   font-family: 'Josefin Sans';
 }
 
-.about-text {
-  margin-top: 10px;
-  padding-top: 40px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  background-color: #fff;
-}
-
-p.body-text,
-p.description {
-  color: var(--body-c);
-  font-family: var(--body-ff);
-}
-
-p.body-text {
-  font-size: 1.5rem;
+p.hero-text {
+  font-size: 1.3rem;
   font-weight: 300;
+  line-height: 2rem;
 }
 
 .socials {
@@ -65,6 +69,49 @@ p.body-text {
   gap: 20px;
 
   font-size: 2.5rem;
+}
+
+@media (min-width: 700px) {
+  .hero-bg {
+    position: absolute;
+    z-index: -1;
+    top: 110px;
+
+    height: 85%;
+    width: 100%;
+    display: block;
+
+    background-color: white;
+    box-shadow: 2px 2px 6px grey;
+  }
+
+  .hero .content {
+    position: relative;
+    left: -3.5vw;
+  }
+
+  .hero .content > *:not(img):not(.name) {
+    margin-left: 7vw;
+  }
+
+  .hero .content img {
+    float: left;
+    margin: 0 16px 0 0;
+    width: 370px;
+    height: 390px;
+  }
+
+  .name {
+    bottom: unset;
+    top: 5%;
+    max-width: unset;
+    width: 390px;
+    left: 48%;
+  }
+
+  .hero h2 {
+    padding-top: 190px;
+  }
 }
 
 /* ------------------ /Hero ------------------ */
@@ -78,7 +125,7 @@ p.body-text {
 .projects {
   margin: 24px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 50px;
 }
 
@@ -156,6 +203,12 @@ p.body-text {
 
 .card-6 .image {
   background-color: var(--card-img-6);
+}
+
+@media (min-width: 700px) {
+  .examples h2 {
+    text-align: left;
+  }
 }
 
 /* ------------------ /Examples ------------------ */
