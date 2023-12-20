@@ -58,7 +58,7 @@ main {
 }
 
 p.hero-text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 300;
   line-height: 2rem;
 }
@@ -108,7 +108,7 @@ p.hero-text {
     top: 5%;
     max-width: unset;
     width: 390px;
-    left: 42%;
+    left: 41%;
   }
 
   .hero h2 {
@@ -175,16 +175,13 @@ p.hero-text {
 .card .title {
   margin-right: auto;
   font-family: var(--body-ff);
+  font-weight: 300;
 }
 
 .card .header .fa-external-link {
   position: relative;
   top: 2px;
   font-size: 1.5rem;
-}
-
-.card .description {
-  font-size: 1.2rem;
 }
 
 .card-1 .image {
