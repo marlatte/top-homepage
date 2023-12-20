@@ -114,6 +114,10 @@ p.hero-text {
   .hero h2 {
     padding-top: 190px;
   }
+
+  .socials {
+    justify-content: start;
+  }
 }
 
 /* ------------------ /Hero ------------------ */

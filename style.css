@@ -43,7 +43,7 @@ img {
   /* Colors */
   --primary-bg: #0891b2;
   --body-c: #565656;
-  --icons: #181616;
+  --icons: #061113;
 
   --card-img-1: #7c75ca;
   --card-img-2: #d88f39;
@@ -96,6 +96,13 @@ p.hero-text,
 p.description {
   color: var(--body-c);
   font-family: var(--body-ff);
+}
+
+@media (min-width: 700px) {
+  .background .color {
+    height: 550px;
+    transform: translate(-1%, -10%) rotate(-15deg);
+  }
 }
 
 /* ------------------ /Universals ------------------ */
