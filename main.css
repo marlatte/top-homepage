@@ -1,12 +1,11 @@
 main {
-  width: 86vw;
+  width: min(1200px, 86vw);
   align-self: center;
   padding-top: 30px;
 }
 
 @media (min-width: 700px) {
   main {
-    width: 80vw;
     padding-top: 50px;
   }
 }
@@ -47,7 +46,7 @@ main {
 .name {
   position: absolute;
   top: calc(var(--img-height) - 106px);
-  max-width: 250px;
+  width: 250px;
   margin: 0 0 0 6%;
 
   font-size: 3.5rem;
@@ -73,7 +72,12 @@ p.hero-text {
   font-size: 2.5rem;
 }
 
+/* --- Tablet View --- */
 @media (min-width: 700px) {
+  .hero {
+    --img-height: 390px;
+  }
+
   .hero-bg {
     position: absolute;
     z-index: -1;
@@ -89,24 +93,21 @@ p.hero-text {
 
   .hero .content {
     position: relative;
-    left: -5vw;
+    left: -3.5vw;
   }
 
   .hero .content > *:not(img):not(.name) {
-    margin-left: 10vw;
+    margin-left: 7vw;
   }
 
   .hero .content img {
     float: left;
     margin: 0 16px 0 0;
     width: 370px;
-    height: 390px;
   }
 
   .name {
-    bottom: unset;
     top: 5%;
-    max-width: unset;
     width: 390px;
     left: 41%;
   }
@@ -117,6 +118,43 @@ p.hero-text {
 
   .socials {
     justify-content: start;
+  }
+}
+
+/* --- Desktop View --- */
+@media (min-width: 1000px) {
+  .hero {
+    --img-height: 460px;
+    height: var(--img-height);
+  }
+
+  .hero-bg {
+    top: 8%;
+    height: 84%;
+    margin-left: 20px;
+  }
+
+  .hero .content {
+    left: 0;
+  }
+
+  .hero .content img {
+    width: 400px;
+  }
+
+  .name {
+    top: calc(var(--img-height) - 51px);
+    left: 5px;
+    margin: 0;
+  }
+
+  .hero h2 {
+    padding-top: 70px;
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: end;
   }
 }
 
@@ -131,7 +169,7 @@ p.hero-text {
 .projects {
   margin: 24px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 50px;
 }
 
