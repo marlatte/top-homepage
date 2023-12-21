@@ -26,17 +26,16 @@ main {
   z-index: 1;
 }
 
-.content > * {
-  --hero-gap: 16px;
-  margin-bottom: var(--hero-gap);
+.pic-name {
+  position: relative;
+  margin: auto;
+  margin-bottom: 32px;
+  width: 90%;
 }
 
-.hero .content img {
-  margin: auto;
-  margin-bottom: calc(var(--hero-gap) * 2);
-
+.pic-name img {
   height: var(--img-height);
-  width: 90%;
+  width: 100%;
 
   object-fit: cover;
 
@@ -45,15 +44,19 @@ main {
 
 .name {
   position: absolute;
-  top: calc(var(--img-height) - 106px);
+  bottom: 0;
   width: 250px;
-  margin: 0 0 0 6%;
+  margin-left: 10px;
 
   font-size: 3.5rem;
   color: white;
   text-shadow: -1px 4px 6px #000000de;
 
   font-family: 'Josefin Sans';
+}
+
+.about-text > * {
+  margin-bottom: 16px;
 }
 
 p.hero-text {
@@ -81,7 +84,7 @@ p.hero-text {
   .hero-bg {
     position: absolute;
     z-index: -1;
-    top: 110px;
+    top: 15%;
 
     height: 85%;
     width: 100%;
@@ -96,28 +99,35 @@ p.hero-text {
     left: -3.5vw;
   }
 
-  .hero .content > *:not(img):not(.name) {
-    margin-left: 7vw;
-  }
-
-  .hero .content img {
+  .pic-name {
+    position: static;
     float: left;
     margin: 0 16px 0 0;
     width: 370px;
   }
 
   .name {
-    top: 5%;
+    bottom: unset;
+    top: 3%;
     width: 390px;
-    left: 41%;
+    right: -40px;
   }
 
-  .hero h2 {
-    padding-top: 190px;
+  .about-text {
+    padding-top: 150px;
+    margin-left: 7vw;
+  }
+
+  .about-text > * {
+    margin: 0;
+  }
+
+  .about-text h2 {
+    margin-bottom: 16px;
   }
 
   .socials {
-    justify-content: start;
+    justify-content: end;
   }
 }
 
@@ -129,32 +139,39 @@ p.hero-text {
   }
 
   .hero-bg {
-    top: 8%;
-    height: 84%;
-    margin-left: 20px;
+    display: none;
   }
 
   .hero .content {
-    left: 0;
+    position: static;
+    display: flex;
   }
 
-  .hero .content img {
+  .pic-name {
+    position: relative;
+    float: none;
     width: 400px;
   }
 
+  .pic-name img {
+    width: unset;
+  }
+
   .name {
-    top: calc(var(--img-height) - 51px);
-    left: 5px;
-    margin: 0;
+    bottom: -5px;
+    top: unset;
+    right: unset;
+    margin: 0 0 0 4px;
+  }
+
+  .about-text {
+    padding: 50px 3.5vw 3vw;
+    background-color: white;
+    box-shadow: 2px 2px 6px grey;
   }
 
   .hero h2 {
-    padding-top: 70px;
     text-align: left;
-  }
-
-  .socials {
-    justify-content: end;
   }
 }
 
