@@ -105,4 +105,11 @@ p.description {
   }
 }
 
+@media (min-width: 1000px) {
+  .background .color {
+    height: 630px;
+    transform: translate(-1%, -10%) rotate(-12deg);
+  }
+}
+
 /* ------------------ /Universals ------------------ */

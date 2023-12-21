@@ -75,3 +75,11 @@ footer img {
     height: auto;
   }
 }
+
+@media (min-width: 1000px) {
+  footer img {
+    flex-shrink: 0;
+    width: 550px;
+    height: 420px;
+  }
+}
