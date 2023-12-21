@@ -66,7 +66,7 @@ p.hero-text {
 }
 
 .socials {
-  padding: 6px 0;
+  padding-top: 6px;
 
   display: flex;
   justify-content: center;
@@ -79,6 +79,8 @@ p.hero-text {
 @media (min-width: 700px) {
   .hero {
     --img-height: 390px;
+
+    padding-bottom: 6px;
   }
 
   .hero-bg {
@@ -135,7 +137,9 @@ p.hero-text {
 @media (min-width: 1000px) {
   .hero {
     --img-height: 460px;
+
     height: var(--img-height);
+    padding: 0;
   }
 
   .hero-bg {
@@ -145,27 +149,34 @@ p.hero-text {
   .hero .content {
     position: static;
     display: flex;
+    align-items: center;
   }
 
   .pic-name {
     position: relative;
     float: none;
-    width: 400px;
+    width: unset;
+    margin: 0;
   }
 
   .pic-name img {
-    width: unset;
+    width: 384px;
   }
 
   .name {
-    bottom: -5px;
+    bottom: -2px;
     top: unset;
     right: unset;
-    margin: 0 0 0 4px;
+    width: unset;
+    margin: 0 0 0 8px;
+
+    font-size: 3.3rem;
   }
 
   .about-text {
-    padding: 50px 3.5vw 3vw;
+    padding: 30px 30px 20px 16px;
+    margin: 0;
+
     background-color: white;
     box-shadow: 2px 2px 6px grey;
   }
@@ -186,7 +197,7 @@ p.hero-text {
 .projects {
   margin: 24px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 50px;
 }
 
